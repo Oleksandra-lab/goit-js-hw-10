@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #93d2ef;
+    color: #212121;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: 1px solid #1a2c35;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 0;
+}
+
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.breed-select {
+    /* display: none; */
+    max-width: 400px;
+    margin: auto;
+}
+
+.loader {
+    font-size: 0;
+    position: relative;
+    width: 120px;
+    height: 90px;
+    margin: 20% auto;
+  }
+  .loader:before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #9d4a92;
+    animation: loading-bounce 0.5s ease-in-out infinite alternate;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 7px;
+    width: 45px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
+    animation: loading-step 1s ease-in-out infinite;
+  }
+
+  @keyframes loading-bounce {
+    0% { transform: scale(1, 0.7)}
+    40% { transform: scale(0.8, 1.2)}
+    60% { transform: scale(1, 1)}
+    100% { bottom: 140px }
+  }
+  @keyframes loading-step {
+    0% {
+      box-shadow: 0 10px 0 rgba(0,0,0,0),
+                  0 10px 0 #fff,
+                -35px 50px 0 #fff,
+                -70px 90px 0 #fff;
+    }
+    100% {
+      box-shadow: 0 10px 0 #fff,
+                -35px 50px 0 #fff,
+                -70px 90px 0 #fff,
+                -70px 90px 0 rgba(0,0,0,0);
+    }
+  }
+
+
+
+.cat-info {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #d0c8de;
+    border: 1px solid #1a2c35 ;
+}
+
+.card-img {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 400px;
+}
